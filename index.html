@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#no1" class="md-skip">
           Skip to content
         </a>
       
@@ -242,18 +242,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Тема
+      Цель работы
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Архитектура и структура проекта
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Архитектура и структура проекта">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Цель работы
+      Основные технологии и зависимости
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Модель данных
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Основные модули
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Настройка и запуск
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Примеры запросов (cURL)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Масштабирование и развитие
     </span>
   </a>
   
@@ -338,18 +398,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Тема
+      Цель работы
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Архитектура и структура проекта
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Архитектура и структура проекта">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Цель работы
+      Основные технологии и зависимости
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Модель данных
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Основные модули
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Настройка и запуск
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Примеры запросов (cURL)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Масштабирование и развитие
     </span>
   </a>
   
@@ -371,15 +491,126 @@
 
 
 
-<h1 id="_1">Отчёт по лабораторной работе</h1>
-<h2 id="_2">Тема</h2>
-<p>Параллельное программирование в Python: threading, multiprocessing, async.</p>
-<h2 id="_3">Цель работы</h2>
-<p>Изучить различные подходы к параллельному выполнению задач в Python, сравнить их работу на примере:</p>
+<h1 id="no1">Отчёт по лабораторной работе №1</h1>
+<h2 id="_1">Цель работы</h2>
+<p>Создание продуманного серверного приложения для управления личными финансами на базе <strong>FastAPI</strong> с поддержкой расширяемой архитектуры, CRUD-операций и возможностью масштабирования, включая будущую реализацию авторизации на основе JWT.</p>
+<h2 id="_2">Архитектура и структура проекта</h2>
+<p>Проект реализован с использованием модульного подхода.</p>
+<pre><code>finance-app/
+├── alembic.ini
+├── requirements.txt
+├── .env
+├── app/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── core/
+│   │   └── config.py
+│   ├── db/
+│   │   ├── __init__.py
+│   │   └── session.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── user.py
+│   │   ├── account.py
+│   │   ├── category.py
+│   │   ├── transaction.py
+│   │   ├── budget.py
+│   │   └── budget_category.py
+│   ├── routers/
+│   │   ├── __init__.py
+│   │   ├── users.py
+│   │   ├── accounts.py
+│   │   ├── categories.py
+│   │   ├── transactions.py
+│   │   └── budgets.py
+│   └── services/
+│       └── security.py
+└── migrations/
+</code></pre>
+<h3 id="_3">Основные технологии и зависимости</h3>
+<ul>
+<li><strong>FastAPI</strong> — фреймворк для создания REST API</li>
+<li><strong>SQLModel</strong> — ORM/модель данных (поверх SQLAlchemy и Pydantic)</li>
+<li><strong>PostgreSQL</strong> — СУБД</li>
+<li><strong>Alembic</strong> — миграции базы данных</li>
+<li><strong>passlib</strong> — хеширование паролей</li>
+<li><strong>python-dotenv</strong> — работа с переменными окружения</li>
+</ul>
+<p><code>requirements.txt</code> содержит:</p>
+<pre><code>fastapi
+uvicorn[standard]
+sqlmodel
+alembic
+psycopg2-binary
+python-dotenv
+passlib[bcrypt]
+</code></pre>
+<h2 id="_4">Модель данных</h2>
+<p>В системе реализованы шесть взаимосвязанных сущностей:</p>
+<ul>
+<li><strong>User</strong> – пользователь (основа для будущей авторизации)</li>
+<li><strong>Account</strong> – счёт или кошелек</li>
+<li><strong>Category</strong> – категория доходов/расходов</li>
+<li><strong>Transaction</strong> – транзакция (доход/расход)</li>
+<li><strong>Budget</strong> – бюджет пользователя</li>
+<li><strong>BudgetCategory</strong> – ассоциативная таблица для связи Budget↔Category c дополнительными полями:</li>
+<li><code>limit_amount</code> — лимит по категории</li>
+<li><code>period</code> — период действия лимита</li>
+</ul>
+<p>Связи:</p>
+<ul>
+<li>User : Account, Budget, Transaction — <strong>one-to-many</strong></li>
+<li>Account : Transaction — <strong>one-to-many</strong></li>
+<li>Category : Transaction — <strong>one-to-many</strong></li>
+<li>Budget : Category — <strong>many-to-many</strong> через BudgetCategory.</li>
+</ul>
+<h2 id="_5">Основные модули</h2>
+<ul>
+<li><code>app/core/config.py</code> – загрузка конфигурации из <code>.env</code></li>
+<li><code>app/db/session.py</code> – подключение к базе данных, создание сессий</li>
+<li><code>app/models/</code> – описание всех таблиц SQLModel</li>
+<li><code>app/routers/</code> – CRUD-роуты для всех сущностей</li>
+<li><code>app/services/security.py</code> – хеширование паролей</li>
+</ul>
+<h2 id="_6">Настройка и запуск</h2>
 <ol>
-<li>Вычислений суммы большого диапазона чисел (CPU-bound).</li>
-<li>Параллельного парсинга веб-страниц с сохранением данных в базу (I/O-bound).</li>
+<li>Создать и активировать виртуальное окружение.</li>
+<li>Установить зависимости <code>pip install -r requirements.txt</code>.</li>
+<li>Создать базу данных PostgreSQL (например, <code>financedb</code>) и пользователя (<code>finance_user</code>).</li>
+<li>Создать файл <code>.env</code>:
+   <code>DATABASE_URL=postgresql+psycopg2://finance_user:StrongPassword123@localhost:5432/financedb</code></li>
+<li>Инициализировать Alembic и выполнить первую миграцию:
+   <code>alembic init migrations
+   alembic revision --autogenerate -m "create initial tables"
+   alembic upgrade head</code></li>
+<li>Запустить сервер:
+   <code>uvicorn app.main:app --reload</code></li>
 </ol>
+<h2 id="curl">Примеры запросов (cURL)</h2>
+<p>Создание пользователя:</p>
+<pre><code>curl -X POST &quot;http://127.0.0.1:8000/users/&quot; -H &quot;Content-Type: application/json&quot; -d '{
+  &quot;email&quot;:&quot;alice@example.com&quot;,
+  &quot;full_name&quot;:&quot;Alice&quot;,
+  &quot;password&quot;:&quot;secret123&quot;
+}'
+</code></pre>
+<p>Создание категории:</p>
+<pre><code>curl -X POST &quot;http://127.0.0.1:8000/categories/&quot; -H &quot;Content-Type: application/json&quot; -d '{
+  &quot;name&quot;:&quot;Food&quot;,
+  &quot;is_income&quot;: false
+}'
+</code></pre>
+<p>(Аналогично для аккаунтов, транзакций, бюджетов и привязок категорий к бюджетам.)</p>
+<h2 id="_7">Масштабирование и развитие</h2>
+<ul>
+<li>Реализация JWT-аутентификации на базе <code>fastapi.security</code> и <code>pyjwt</code>.</li>
+<li>Добавление ролей пользователей (администратор, пользователь).</li>
+<li>Версионирование API и покрытие тестами.</li>
+<li>Возможность контейнеризации в Docker.</li>
+</ul>
+<hr />
+<p><strong>Вывод:</strong><br />
+Проект представляет собой готовую основу для персонального финансового менеджера, поддерживает CRUD для всех ключевых сущностей и подготовлен к дальнейшему развитию (авторизация, расширенные отчеты, интеграция с фронтендом или мобильным приложением).</p>
 
 
 
