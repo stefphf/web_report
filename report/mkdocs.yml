@@ -1,0 +1,8 @@
+site_name: Отчеты по лабораторным раболтам
+theme:
+  name: material
+
+nav:
+  - LAB 1: index.md
+  - LAB 2: 2.md
+  - LAB 3: 3.md
